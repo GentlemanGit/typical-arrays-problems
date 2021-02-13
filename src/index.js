@@ -1,12 +1,43 @@
+//Создание функции для поиска минимального элемента
+exports.min = function min(array) {
+    //Проверка массива на наличие элементов
+    if (array === undefined || array.length === 0) {
+        return 0;
+    } else {
+        //Поиск минимального элемента
+        let minEl = Math.min(
+            ...array
+        ); /*Math.min - ищет из чисел минимальное;
+   ...arr - переводит массив arr в строку чисел*/
+        return minEl; //Возвращает минимальное значение из массива
+    }
+};
+//Создание функции для поиска минимального элемента
+exports.max = function max(array) {
+    //Проверка массива на наличие элементов
+    if (array === undefined || array.length === 0) {
+        return 0;
+    } else {
+        //Поиск максимального элемента
+        let maxEl = Math.max(
+            ...array
+        ); /*Math.max - ищет из чисел максимальное;
+     ...arr - переводит массив arr в строку чисел*/
+        return maxEl; //Возвращает максимальное значение из массива
+    }
+};
+//Создание функции для поиска среднего значения массива
+exports.avg = function avg(array) {
+    //Проверка массива на наличие элементов
+    if (array === undefined || array.length === 0) {
+        return 0;
+    } else {
+        //Поиск среднего значения всех элементов элемента
+        let avgEl =
+            array.reduce((sum, el) => sum + el, 0) /
+            array.length; /*reduce позволяет сложить все элементы,
+     затем разделим на длинну массива, т.е. количество элементов*/
+        return avgEl; //Возвращает среднее значение всех элементов массива
+    }
+};
 
-exports.min = function min (array) {
-  return 0;
-}
-
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
